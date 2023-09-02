@@ -40,17 +40,4 @@ with zipfile.ZipFile(target, "w") as outzip:
                 with open(srcpath, 'rb') as infile:
                     # Write to zip
                     outzip.writestr(dstpath_in_zip, infile.read())
-# try:
-#     # Создаем архив если его нет и открываем его на запись
-#     with zipfile.ZipFile(target, mode='x') as archive:
-#         for path in source:
-#             # Записываем файлы в архив
-#             archive.write(path)
-#
-# except FileExistsError as e:
-#     print('Такой архив уже существует!')
-# except Exception as e:
-#     print('Создание резервной копии НЕ УДАЛОСЬ')
-#     print('Ошибка:', e)
-# else:
-#     print('Резервная копия успешно создана в', target)
+
